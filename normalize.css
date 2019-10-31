@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+/*!
+ * Normalize.css, Eric Meyer'in reset.css'ini ve Nicolas Gallagher'ın normalize.css'ini birleştirip
+   kendi istek ve ihtiyaçarıma göre yeni eklemeler de yaparak özelleştirdiğim halidir.
+ *
+ * Special normalize.css
+ * Created by FERDI TARAKCI
+ * Website: www.ferditarakci.com
+ * Last updated: 2019/10/31
+ */
+
+* {
+  outline: none;
+  -moz-outline: none;
+  -moz-user-focus: none;
+}
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, p, span, h1, h2, h3, h4, h5, h6, a, img, iframe, pre, del, s, strike, ins, u, em, i, strong, b,
+address, abbr, acronym, dfn, code, kbd, var, object, applet, blockquote, small, ol, ul, li, dl, dt, dd,
+fieldset, form, label, legend, sub, sup, q, samp, table, caption, tbody, tfoot, thead, tr, th, td, article,
+main, aside, figure, figcaption, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main, article, aside, figure, figcaption, footer, header, hgroup, nav, section, details {
+  display: block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+html {
+  min-height: 100%;
+  font-family: sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -ms-overflow-style: scrollbar;
+}
+
+body {
+  min-height: 100%;
+  line-height: 1.7em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 13px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  margin-top: 30px;
+}
+
+ul, ol {
+  margin: 10px 0;
+  padding-left: 30px;
+}
+.ar ul, .ar ol {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i, dfn {
+  font-style: italic;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  position: relative;
+  line-height: 1;
+  font-size: 75%;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+pre, kbd, code, samp {
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+nav * {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+}
+nav ul, nav ol {
+  list-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg {
+  /*
+  For IE9. Without, occasionally draws shapes
+  outside the boundaries of <svg> rectangle.
+  */
+  overflow: hidden;
+}
+
+/* FORM ELEMENTS
+   ====================================== */
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  line-height: 1.15;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 0;
+  vertical-align: middle;
+}
+
+textarea {
+  overflow: auto;
+  overflow-x: hidden;
+  resize: vertical;
+}
+
+input,
+button {
+  overflow: visible;
+}
+
+.gm-style button {
+  /*!
+   * Google Maps Button Style Correction
+   * Ferdi Tarakci
+   * ferditarakci.com
+   */
+  overflow: hidden !important;
+}
+
+select,
+button {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input:-webkit-autofill {
+  color: #2a2a2a !important;
+  background: none;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+::-ms-clear {
+  display: none;
+}
+
+fieldset {
+  margin: 10px 0;
+  padding: 0.35em 0.75em 0.625em;
+  border: 1px solid #c8c8c8;
+}
+
+legend {
+  max-width: 100%;
+  padding: 0 10px;
+  white-space: normal;
+  color: inherit;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+template, [hidden], .hide, .hidden {
+  display: none !important;
+}
+
+[href], [data-href] {
+  cursor: pointer;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #1b2b52;
+}
+
+::selection {
+  color: #fff;
+  background-color: #1b2b52;
+}
